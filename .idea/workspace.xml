@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa0f0cd8-ec19-45c7-b925-75f819816f66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../gp-tool/error-module" beforeDir="false" afterPath="$PROJECT_DIR$/../gp-tool/error-module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gp-tool/gp-parent.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gp-tool/optijects" beforeDir="false" afterPath="$PROJECT_DIR$/../gp-tool/optijects" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/../gp-tool/gpcore/target/" />
+    <ignored path="$PROJECT_DIR$/../gp-tool/target/" />
+    <ignored path="$PROJECT_DIR$/../gp-tool/error-module/proto-components/target/" />
+    <ignored path="$PROJECT_DIR$/../gp-tool/optijects/target/" />
+    <ignored path="$PROJECT_DIR$/../gp-tool/error-module/error-file-plugin/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JRCPClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1395">
+              <caret line="109" column="29" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JCOPSimulatorServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JCOPSimulatorImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/jcop.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>abc</find>
+      <find>&quot;</find>
+      <find>+</find>
+      <find>JCSHELL_PATH</find>
+      <find>CLASSPATH_JCSHELL</find>
+      <find>findProcessByName</find>
+      <find>io.</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../gp-tool" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/company/StreamGobbler.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/Processes.java" />
+        <option value="$PROJECT_DIR$/NXP_JCShell_5.20.1.4/jcshell.bat" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/StreamGobbler.java" />
+        <option value="$PROJECT_DIR$/install_cygwin.ps1" />
+        <option value="$PROJECT_DIR$/NXP_JCShell_5.20.1.4/jcshell.sh" />
+        <option value="$PROJECT_DIR$/jcop.ps1" />
+        <option value="$PROJECT_DIR$/test.txt" />
+        <option value="$PROJECT_DIR$/NXP_JCShell_5.20.1.4/jcshell_docker.sh" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/WebSocketServer.java" />
+        <option value="$PROJECT_DIR$/start.ps1" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/JRCPWrapperWebSocketClient.java" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/JRCPWrapperWebSocketServer.java" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/Application.java" />
+        <option value="$PROJECT_DIR$/src/com/optimos/jrcpwrapper/Application.java" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/optimos/jrcpwrapper/Application.java" />
+        <option value="$PROJECT_DIR$/src/com/tsystems/optimos/jrcpwrapper/JRCPWrapperWebSocketServer.java" />
+        <option value="$PROJECT_DIR$/src/main/proto/example.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JRCPWrapperWebSocketServer.java" />
+        <option value="$PROJECT_DIR$/src/main/ressources/log4j2.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/Application.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JRCPWrapperWebSocketClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JCOPSimServer.java" />
+        <option value="$PROJECT_DIR$/start.ps1" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/SImulatorProcessListener.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/SimulatorProcessWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/SimulatorProcessListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/Simulator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JCOPSimulatorServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JCOPSimulatorServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JRCPClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JRCPClient.java" />
+        <option value="$PROJECT_DIR$/src/main/proto/jcop.proto" />
+        <option value="$PROJECT_DIR$/src/main/proto/jcop.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JCOPSimulatorImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="TcYcSAjs" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jcshell-wrapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jcshell-wrapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="23" />
+    <option name="y" value="23" />
+    <option name="width" value="1633" />
+    <option name="height" value="932" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JCShellWrapper" type="58d84e3e:PackageViewProjectNode" />
+              <item name="JCShellWrapper" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JCOPSimulatorHub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCOPSimulatorHub" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCOPSimulatorHub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCOPSimulatorHub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCOPSimulatorHub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCOPSimulatorHub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCOPSimulatorHub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCOPSimulatorHub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JCOPSimulatorHub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JCOPSimulatorHub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jrcpwrapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/ressources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsystems.optimos.jrcpwrapper.Application" />
+      <module name="JCOPSimulatorHub" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tsystems.optimos.jrcpwrapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tsystems.Application" />
+      <module name="JCOPSimulatorHub" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker2">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildCliOptions" value="" />
+          <option name="buildOnly" value="true" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Application" />
+      <item itemvalue="Docker.Dockerfile" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa0f0cd8-ec19-45c7-b925-75f819816f66" name="Default Changelist" comment="" />
+      <created>1588472697265</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588472697265</updated>
+      <workItem from="1588472702038" duration="575000" />
+      <workItem from="1588473302947" duration="2303000" />
+      <workItem from="1588507736944" duration="1359000" />
+      <workItem from="1588572189577" duration="13000" />
+      <workItem from="1588590639197" duration="7225000" />
+      <workItem from="1588598235581" duration="3625000" />
+      <workItem from="1588602667165" duration="4514000" />
+      <workItem from="1588712242059" duration="6054000" />
+      <workItem from="1588718777392" duration="7211000" />
+      <workItem from="1589154978107" duration="6792000" />
+      <workItem from="1589223695485" duration="19448000" />
+      <workItem from="1589280771319" duration="1380000" />
+      <workItem from="1589315129119" duration="9024000" />
+      <workItem from="1589548263855" duration="8307000" />
+      <workItem from="1589785978490" duration="663000" />
+      <workItem from="1589807270047" duration="4902000" />
+      <workItem from="1591033658300" duration="5841000" />
+      <workItem from="1591081517349" duration="3755000" />
+      <workItem from="1591280522518" duration="15357000" />
+      <workItem from="1591782532021" duration="347000" />
+      <workItem from="1591795353055" duration="1170000" />
+      <workItem from="1591997558372" duration="13629000" />
+      <workItem from="1592245190564" duration="6375000" />
+      <workItem from="1592299241851" duration="5631000" />
+      <workItem from="1592313157480" duration="1731000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="137231000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="23" y="23" width="1633" height="932" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8006329" visible="true" weight="0.21935889" />
+      <window_info id="Structure" order="1" sideWeight="0.19936709" side_tool="true" visible="true" weight="0.21935889" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="UI Designer" order="6" />
+      <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Java Enterprise" order="1" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49893844" weight="0.329849" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.87119603" weight="0.3" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49966645" weight="0.39880952" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.86624205" visible="true" weight="0.24761905" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.4981685" weight="0.3290993" />
+      <window_info anchor="bottom" id="Docker" order="10" weight="0.62471133" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.12880397" side_tool="true" weight="0.54123116" />
+      <window_info anchor="bottom" id="CheckStyle" order="12" sideWeight="0.49899933" weight="0.32871535" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.4968153" visible="true" weight="0.36666667" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="16" />
+      <window_info anchor="bottom" id="Log Analyzer" order="17" />
+      <window_info anchor="bottom" id="SOQL Query" order="18" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24969475" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.07416719" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Cargo" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="9" />
+      <window_info anchor="right" id="CDI" order="10" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="uml://MAVEN/com.tsystems:jcshellWrapper:1.0.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.tsystems:jcshellWrapper:1.0.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">com.tsystems:jcshellWrapper:1.0.0-SNAPSHOT</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-242.0" y="41.0" />
+          <SelectedNodes>
+            <node>com.tsystems:jcshellWrapper:1.0.0-SNAPSHOT</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/BufferedOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="633" column="15" selection-start-line="633" selection-start-column="15" selection-end-line="633" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="755" selection-start-line="755" selection-end-line="755" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/security/SecureClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/ProcessBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="1047" selection-start-line="1047" selection-end-line="1047" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tsystems/Processes.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="325" selection-start-line="325" selection-end-line="325" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/jcshell.rc" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="785" column="29" selection-start-line="785" selection-start-column="29" selection-end-line="785" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="1650" selection-start-line="1650" selection-end-line="1650" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/jcshell.bat" />
+    <entry file="file://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/jcshell.sh" />
+    <entry file="file://$PROJECT_DIR$/src/com/tsystems/StreamGobbler.java" />
+    <entry file="jar://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/lib/nxp-jrcp-lib.jar!/com/nxp/id/jrcp/client/JRCPoverTCPChannelClient.class" />
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/net/Socket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="209" column="11" selection-start-line="209" selection-start-column="11" selection-end-line="209" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/lib/nxp-jrcp-lib.jar!/com/nxp/id/jrcp/messages/wait_for_card/WaitForCardRequestMessage.class" />
+    <entry file="file://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/jcshell_docker.sh" />
+    <entry file="file://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/scripts/gp22/gp22_AmdA_OnCard.jcsh" />
+    <entry file="file://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/scripts/terminal/VIRTUALISO.jcsh" />
+    <entry file="file://$PROJECT_DIR$/install_cygwin.ps1" />
+    <entry file="file://$PROJECT_DIR$/jcop.ps1" />
+    <entry file="jar://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/lib/nxp-jrcp-lib.jar!/com/nxp/id/jrcp/client/GenericJRCPChannelClient.class" />
+    <entry file="jar://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/lib/nxp-jrcp-lib.jar!/com/nxp/id/jrcp/messages/controller_configuration/ControllerConfigurationRequestMessage.class" />
+    <entry file="jar://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/lib/nxp-jrcp-lib.jar!/com/nxp/id/jrcp/messages/server_status/ServerStatusRequestMessage.class" />
+    <entry file="jar://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/lib/nxp-jrcp-lib.jar!/com/nxp/id/jrcp/messages/JRCPMessage.class" />
+    <entry file="jar://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/lib/nxp-jrcp-lib.jar!/com/nxp/id/jrcp/messages/JRCPRequestMessage.class" />
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/io/grpc/examples/helloworld/HelloRequest.java" />
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/io/grpc/examples/helloworld/HelloWorldProto.java" />
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/io/grpc/examples/helloworld/HelloReply.java" />
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/io/grpc/examples/helloworld/HelloRequestOrBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JRCPWrapperWebSocketServer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/ressources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/io/grpc/examples/jcop/JCOPSimulatorGrpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="300" column="22" selection-start-line="300" selection-start-column="22" selection-end-line="300" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/java-websocket/Java-WebSocket/1.5.1/Java-WebSocket-1.5.1.jar!/org/java_websocket/client/WebSocketClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+          <folding>
+            <element signature="e#2237#2238#0" expanded="true" />
+            <element signature="e#2295#2296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/SimulatorProcessWrapper.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/SimulatorProcessListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/Simulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JRCPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="109" column="29" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JCOPSimulatorServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/jcop.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tsystems/optimos/jrcpwrapper/JCOPSimulatorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JCOPSimulatorHub</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>nxp-jrcp-lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

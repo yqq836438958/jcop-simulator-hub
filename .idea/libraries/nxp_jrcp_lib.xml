@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="nxp-jrcp-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/NXP_JCShell_5.20.1.4/lib/nxp-jrcp-lib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

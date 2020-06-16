@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.jcop";
+option java_outer_classname = "JcopProto";
+
+package jcop;
+
+// Service Definition
+service JCOPSimulator {
+  rpc Open (OpenRequest) returns (OpenReply) {}
+  rpc TransmitAPDU (Capdu) returns (Rapdu) {}
+  rpc Reset(ResetRequest) returns (ResetReply){}
+  rpc Stop(StopRequest) returns (StopReply){}
+}
+
+// The request message containing the simulator version
+message OpenRequest {
+   Version version = 1;
+}
+
+// The response message containing a session ID and the simulators ATR
+message OpenReply {
+  string session_id = 1;
+  string simulator_id = 2;
+  bytes atr = 3;
+}
+
+message Capdu {
+  string session_id = 1;
+  string simulator_id = 2;
+  bytes apdu = 3;
+}
+
+message Rapdu {
+  string session_id = 1;
+  string simulator_id = 2;
+  bytes apdu = 3;
+}
+
+message ResetRequest {
+  string session_id = 1;
+  string simulator_id = 2;
+  bool warm = 3;
+}
+
+message ResetReply {
+  string session_id = 1;
+  string simulator_id = 2;
+  bytes atr = 3;
+}
+
+message StopRequest {
+  string session_id = 1;
+  string simulator_id = 2;
+}
+
+message StopReply {
+  string session_id = 1;
+  string simulator_id = 2;
+  bool success = 3;
+}
+
+enum Version {
+  UNSPECIFIED = 0;
+  JCOP4_7_R1_00_4_RC17 = 1;
+}
+

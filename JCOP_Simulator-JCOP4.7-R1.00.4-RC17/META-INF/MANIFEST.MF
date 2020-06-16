@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+jtools_depends_version_jcshell: 4.15.0.0
+Implementation-Title: NXP internal JCOP Plugin Components
+Implementation-Version: JCOP4.7-R1.00.4-RC17
+Archiver-Version: Plexus Archiver
+jtools_depends_version_JCOPX_API: R1.1.4
+jtools_version: JCOP4.7-R1.00.4-RC17
+jtools_name: JCOP_Simulator
+jtools_traceanalyzersupport: true
+Implementation-Vendor: NXP Semiconductors Netherlands B.V.
+jtools_secureboxsupport: false
+jtools_depends_name_jcshell: JCShell
+jtools_depends_name_JCOPX_API: JCOPX_API
+Created-By: NXP Semiconductors Netherlands B.V.
+integer-support: true
+jtools_description: JCOP Simulator JCOP4.7-R1.00.4-RC17
+jtools_plugin: targetpack1
+jtools_type: jcop_simulator
+
+Name: win32/jcop.exe
+SHA-256-Digest: CGqL+iBqP49eIRI524Vl7ANtL7PM/5OKBcFd9iNOTD0=
+
+Name: doc/jrcp-simu-extensions-1.1.pdf
+SHA-256-Digest: d5oSJjF9l0xuhw9Awfpq1GvHrcflZTrpMZqsiocgF18=
+
+Name: data/Default_RSA4k/RomizedImage.bin
+SHA-256-Digest: 4+sRipyqRBsLFuLiCFfH7yGgBFtCqYVnKuOezkoyr0Y=
+
+Name: data/Default_Bio/RomizedImage.bin
+SHA-256-Digest: AKgny2rVrXuDXG21IHFrVoNwKrACDpQ5KqUkSX2UC4I=
+
+Name: data/EMV_Plain/RomizedImage.bin
+SHA-256-Digest: hMOk91pxHgRHvME392U6dPbddyjeWYi0BHNghFVxp78=
+
+Name: doc/JCOP_Simulator_UserManual.pdf
+SHA-256-Digest: +S6apkn8lqCm7CsNosb6Di9+4Aw8C2j3rHDasTcPpz4=
+
+Name: data/RomizedImage.bin
+SHA-256-Digest: 1C1vXdk1wU7vUqU2BZaiUwJUIVSbu21lz+UsyBvj0vY=
+
+Name: data/Default/RomizedImage.bin
+SHA-256-Digest: yBmM6jdGxpLCROSUl7cVSGDQs1ezjfr8TrXSyEgeEiU=
+

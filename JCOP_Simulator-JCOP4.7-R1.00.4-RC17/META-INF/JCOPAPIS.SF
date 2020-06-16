@@ -1,0 +1,30 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: zTeGhtbmec96Cw6QAIRpkSb+UUDUK
+ sNlUoRuGvw+HNE=
+SHA-256-Digest-Manifest: /5Nc0TML5g9ETFi+oMb7kPePaifphrCOD+E47voSZGE=
+Created-By: 1.8.0_102 (Oracle Corporation)
+
+Name: win32/jcop.exe
+SHA-256-Digest: U6B3smKtZArQxl3K788uZvaqHtotAvB7WOfhk7bCKLw=
+
+Name: doc/jrcp-simu-extensions-1.1.pdf
+SHA-256-Digest: Kh1zb5FNi+r0ERZAVe8TAfnKTxvPo5y8B6WdKKQqXSs=
+
+Name: data/Default_RSA4k/RomizedImage.bin
+SHA-256-Digest: w1Fure/yjKISKlC2nQ4j7wliQ4udIrsSFCQ/z5lnDzk=
+
+Name: data/Default_Bio/RomizedImage.bin
+SHA-256-Digest: hw2XVOn0WGPp33oHxZ0JcPSn6ZfaCf6X8IB3Q2CUBv8=
+
+Name: data/EMV_Plain/RomizedImage.bin
+SHA-256-Digest: iwflVYZwjchPZd52J47up7+su+gmw5dksFwKNa8WUp0=
+
+Name: doc/JCOP_Simulator_UserManual.pdf
+SHA-256-Digest: NvRVVfiAiT1LdU+dqnQg3nwKFqcD7/9skH37joGymx0=
+
+Name: data/RomizedImage.bin
+SHA-256-Digest: GJWSvx2GdRB2FfmXwo+QLoRZpNhTTnmEDsT9AuNiWvI=
+
+Name: data/Default/RomizedImage.bin
+SHA-256-Digest: Yg2GhKVM1ywLnDlzpjCiE05+Bxxl7sn6YYTL6K2Ycos=
+

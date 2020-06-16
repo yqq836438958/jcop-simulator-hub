@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="JCOPSimulatorHub" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="error-file-plugin" target="1.8" />
+      <module name="error-protos" target="11" />
+      <module name="gp-parent" target="1.5" />
+      <module name="gpt" target="11" />
+      <module name="JCOPSimulatorHub" target="9" />
+      <module name="optijects" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
