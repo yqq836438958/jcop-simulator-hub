@@ -1,7 +1,7 @@
 package com.tsystems.optimos.jrcpwrapper;
 
-import com.google.protobuf.Any;
 import com.google.protobuf.ByteString;
+import com.google.protobuf.Timestamp;
 import com.google.rpc.Code;
 import com.google.rpc.Status;
 import com.googlecode.protobuf.format.JsonFormat;
@@ -13,29 +13,35 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.Time;
+import java.time.Instant;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ExecutionException;
 
 public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
     private static final Logger logger = (LogManager.getLogger("com.tsystems.optimos.jrcpwrapper"));
 
     private static JsonFormat jsonFormat = new JsonFormat();
-    private static Map<String, JRCPClient> clientMap = new HashMap<>();
     private static Map<String, Simulator> simulatorMap = new HashMap<>();
     private static Map<Version, File> fileMapping = new HashMap<>();
+    private JRCPWrapper jrcpWrapper;
 
-    JCOPSimulatorImpl() {
+
+    JCOPSimulatorImpl() throws FileNotFoundException {
         super();
 
+        jrcpWrapper = new JRCPWrapper();
         File file = new File("JCOP_Simulator-JCOP4.7-R1.00.4-RC17/win32/jcop.exe");
         if (!file.exists()) {
-            //TODO err
+            throw new FileNotFoundException("file with path '" + file.getAbsolutePath() + "' not found");
         }
 
         fileMapping.put(Version.JCOP4_7_R1_00_4_RC17, file);
-
     }
 
     @Override
@@ -62,19 +68,25 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
             Simulator simulator = new Simulator(simulatorId,port,file);
             simulator.startInstance(exitCode -> logger.info("process exit with code: " + exitCode));
 
-            JRCPClient client = new JRCPClient();
+
             // wait for simulator port to be reachable
-            client.waitForSimulator(simulator);
+            if (!jrcpWrapper.connect(simulator).get()) {
+                Status status = Status.newBuilder()
+                        .setCode(Code.INTERNAL.getNumber())
+                        .setMessage("couldn't connect to simulator")
+                        .build();
+
+                responseObserver.onError(StatusProto.toStatusRuntimeException(status));
+            }
+
             simulatorMap.put(simulatorId, simulator);
+            simulator.setLastInteraction(Instant.now());
 
             // connect to card
-            byte[] atr = client.waitForCard(simulator.getId());
+            byte[] atr = jrcpWrapper.waitForCard(simulator.getId()).get();
 
-            String uuid;
             if (atr != null) {
-                uuid = UUID.randomUUID().toString();
-                clientMap.put(uuid, client);
-                logger.info("opened session " + uuid + " to simulator " + simulator.getId() + " on port " + simulator.getPort() );
+                logger.info("opened session to simulator " + simulator.getId() + " on port " + simulator.getPort() );
             } else {
                 Status status = Status.newBuilder()
                         .setCode(Code.INTERNAL.getNumber())
@@ -88,12 +100,11 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
             OpenReply reply = OpenReply.newBuilder()
                     .setAtr(ByteString.copyFrom(atr))
                     .setSimulatorId(simulator.getId())
-                    .setSessionId(uuid)
                     .build();
 
             responseObserver.onNext(reply);
             responseObserver.onCompleted();
-        } catch (IOException e) {
+        } catch (InterruptedException | ExecutionException | IOException e) {
             e.printStackTrace();
             Status status = Status.newBuilder()
                     .setCode(Code.INTERNAL.getNumber())
@@ -105,19 +116,33 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
 
     @Override
     public void transmitAPDU(Capdu request, StreamObserver<Rapdu> responseObserver) {
-        logger.info("session : " + request.getSessionId() + " Capdu -> " + HexUtil.byteArrayToHexString(request.getApdu().toByteArray()));
+        logger.info("Simulator: " + request.getSimulatorId() + " Capdu -> " + HexUtil.byteArrayToHexString(request.getApdu().toByteArray()));
 
-        JRCPClient client = clientMap.get(request.getSessionId());
-        if (client == null) {
+        Simulator simulator = simulatorMap.get(request.getSimulatorId());
+
+        if (simulator == null) {
             Status status = Status.newBuilder()
                     .setCode(Code.UNAVAILABLE.getNumber())
-                    .setMessage("no JRCP client found for " + request.getSessionId())
+                    .setMessage("no simulator found for " + request.getSimulatorId())
                     .build();
             responseObserver.onError(StatusProto.toStatusRuntimeException(status));
             return;
         }
 
-        byte[] resp= client.sendData(request.getSimulatorId(), request.getApdu().toByteArray());
+        byte[] cmd = request.getApdu().toByteArray();
+        byte[] resp = new byte[0];
+        try {
+            resp = jrcpWrapper.sendData(request.getSimulatorId(), cmd).get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+            Status status = Status.newBuilder()
+                    .setCode(Code.INTERNAL.getNumber())
+                    .setMessage("unknown")
+                    .build();
+            responseObserver.onError(StatusProto.toStatusRuntimeException(status));
+        }
+
+        simulator.setLastInteraction(Instant.now());
 
         if (resp == null) {
             Status status = Status.newBuilder()
@@ -128,10 +153,13 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
             return;
         }
 
-        logger.info("session : " + request.getSessionId() + " Rapdu <- " + HexUtil.byteArrayToHexString(resp));
+        simulator.setLastCommand(cmd);
+        simulator.setLastResp(resp);
+
+        logger.info("Simulator: " + request.getSimulatorId() + " Rapdu <- " + HexUtil.byteArrayToHexString(resp));
 
         Rapdu rapdu = Rapdu.newBuilder()
-                .setSessionId(request.getSessionId())
+                .setSimulatorId(request.getSimulatorId())
                 .setApdu(ByteString.copyFrom(resp))
                 .build();
 
@@ -141,13 +169,13 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
 
     @Override
     public void reset(ResetRequest request, StreamObserver<ResetReply> responseObserver) {
-        logger.info("simulator: " + request.getSimulatorId() + " session : " + request.getSessionId() + " request reset " + (request.getWarm() ? "warm" : "cold"));
+        logger.info("Simulator: " + request.getSimulatorId() + " request reset " + (request.getWarm() ? "warm" : "cold"));
+        Simulator simulator = simulatorMap.get(request.getSimulatorId());
 
-        JRCPClient client = clientMap.get(request.getSessionId());
-        if (client == null) {
+        if (simulator == null) {
             Status status = Status.newBuilder()
                     .setCode(Code.UNAVAILABLE.getNumber())
-                    .setMessage("no JRCP client found for " + request.getSessionId())
+                    .setMessage("no simulator found for " + request.getSimulatorId())
                     .build();
             responseObserver.onError(StatusProto.toStatusRuntimeException(status));
             return;
@@ -155,17 +183,31 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
 
         byte[] atr;
 
-        if (request.getWarm()) {
-            atr = client.warmReset(request.getSimulatorId());
-        } else {
-            atr = client.coldReset(request.getSimulatorId());
+        try {
+            if (request.getWarm()) {
+                atr = jrcpWrapper.warmReset(request.getSimulatorId()).get();
+            } else {
+                atr = jrcpWrapper.coldReset(request.getSimulatorId()).get();
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+
+            Status status = Status.newBuilder()
+                    .setCode(Code.INTERNAL.getNumber())
+                    .setMessage("unknown")
+                    .build();
+            responseObserver.onError(StatusProto.toStatusRuntimeException(status));
+            return;
         }
 
-        logger.info("session : " + request.getSessionId() + " reset success: " + HexUtil.byteArrayToHexString(atr));
+        simulator.setLastInteraction(Instant.now());
+        simulator.setLastCommand(null);
+        simulator.setLastResp(null);
+
+        logger.info("Simulator: " + request.getSimulatorId() + " reset success: " + HexUtil.byteArrayToHexString(atr));
 
         ResetReply reply = ResetReply.newBuilder()
                 .setSimulatorId(request.getSimulatorId())
-                .setSessionId(request.getSessionId())
                 .setAtr(ByteString.copyFrom(atr))
                 .build();
 
@@ -175,15 +217,20 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
 
     @Override
     public void stop(StopRequest request, StreamObserver<StopReply> responseObserver) {
-        logger.info("simulator: " + request.getSimulatorId() + " session : " + request.getSessionId() + " stop request");
+        logger.info("Simulator: " + request.getSimulatorId() + " stop request");
 
         Simulator simulator = simulatorMap.get(request.getSimulatorId());
-        Process process = simulator.getProcess();
-        process.destroy();
-        try {
-            process.waitFor();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        if (simulator == null) {
+            Status status = Status.newBuilder()
+                    .setCode(Code.UNAVAILABLE.getNumber())
+                    .setMessage("no simulator found for " + request.getSimulatorId())
+                    .build();
+            responseObserver.onError(StatusProto.toStatusRuntimeException(status));
+            return;
+        }
+
+        if(!simulator.stopInstance()) {
+            simulator.setLastInteraction(Instant.now());
             Status status = Status.newBuilder()
                     .setCode(Code.UNAVAILABLE.getNumber())
                     .setMessage("couldn't stop process for simulator")
@@ -192,14 +239,36 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
             return;
         }
 
+
         StopReply reply = StopReply.newBuilder()
-                .setSimulatorId(request.getSimulatorId())
-                .setSessionId(request.getSessionId())
+                .setSimulatorId(simulator.getId())
                 .setSuccess(true)
                 .build();
 
-        clientMap.remove(request.getSessionId());
         simulatorMap.remove(simulator.getId());
+
+        responseObserver.onNext(reply);
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void getStatus(GetStatusRequest request, StreamObserver<GetStatusReply> responseObserver) {
+        Simulator simulator = simulatorMap.get(request.getSimulatorId());
+        if (simulator == null) {
+            Status status = Status.newBuilder()
+                    .setCode(Code.UNAVAILABLE.getNumber())
+                    .setMessage("no simulator found for " + request.getSimulatorId())
+                    .build();
+            responseObserver.onError(StatusProto.toStatusRuntimeException(status));
+            return;
+        }
+
+        GetStatusReply reply = GetStatusReply.newBuilder()
+                .setSimulatorId(simulator.getId())
+                .setCreated(Timestamp.newBuilder().setSeconds(simulator.getCreated().getEpochSecond()))
+                .setLastInteraction(Timestamp.newBuilder().setSeconds(simulator.getLastInteraction().getEpochSecond()).build())
+                .setLastCommand(ByteString.copyFrom(simulator.getLastCommand()))
+                .build();
 
         responseObserver.onNext(reply);
         responseObserver.onCompleted();

@@ -5,6 +5,7 @@ import io.grpc.ServerBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -12,15 +13,23 @@ class JCOPSimulatorServer {
     private static final Logger logger = (LogManager.getLogger("com.tsystems.optimos.jrcpwrapper"));
     private Server server;
 
-    JCOPSimulatorServer() { }
+    JCOPSimulatorServer() {
+    }
 
     void start() throws IOException {
         int port = 8080;
 
         logger.info("Server started, listening on " + port);
+        JCOPSimulatorImpl impl = null;
+        try {
+            impl = new JCOPSimulatorImpl();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
 
         server = ServerBuilder.forPort(port)
-                .addService(new JCOPSimulatorImpl())
+                .addService(impl)
                 .build()
                 .start();
 
