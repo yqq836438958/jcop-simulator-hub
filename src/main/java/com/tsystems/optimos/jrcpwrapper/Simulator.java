@@ -3,7 +3,6 @@ package com.tsystems.optimos.jrcpwrapper;
 import java.io.File;
 import java.io.IOException;
 import java.time.Instant;
-import java.util.Date;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 

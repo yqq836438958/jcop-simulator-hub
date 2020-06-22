@@ -1,13 +1,8 @@
 package com.tsystems.optimos.jrcpwrapper;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 
 public class Application {
-    public static final Logger logger = (LogManager.getLogger("com.tsystems.optimos.jrcpwrapper"));
-
 
     public static void main(String[] args) {
         final JCOPSimulatorServer server = new JCOPSimulatorServer();

@@ -15,9 +15,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.Time;
 import java.time.Instant;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -67,7 +65,6 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
             // start simulator instance
             Simulator simulator = new Simulator(simulatorId,port,file);
             simulator.startInstance(exitCode -> logger.info("process exit with code: " + exitCode));
-
 
             // wait for simulator port to be reachable
             if (!jrcpWrapper.connect(simulator).get()) {
@@ -229,7 +226,7 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
             return;
         }
 
-        if(!simulator.stopInstance()) {
+        if (!simulator.stopInstance()) {
             simulator.setLastInteraction(Instant.now());
             Status status = Status.newBuilder()
                     .setCode(Code.UNAVAILABLE.getNumber())
@@ -238,7 +235,6 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
             responseObserver.onError(StatusProto.toStatusRuntimeException(status));
             return;
         }
-
 
         StopReply reply = StopReply.newBuilder()
                 .setSimulatorId(simulator.getId())
@@ -253,6 +249,8 @@ public class JCOPSimulatorImpl extends JCOPSimulatorGrpc.JCOPSimulatorImplBase {
 
     @Override
     public void getStatus(GetStatusRequest request, StreamObserver<GetStatusReply> responseObserver) {
+        logger.info("Simulator: " + request.getSimulatorId() + " received getStatus request");
+
         Simulator simulator = simulatorMap.get(request.getSimulatorId());
         if (simulator == null) {
             Status status = Status.newBuilder()

@@ -35,7 +35,7 @@ class JRCPWrapper {
                 Socket socket = new Socket();
 
                 try {
-                    socket.connect(new InetSocketAddress("localhost",simulator.getPort()));
+                    socket.connect(new InetSocketAddress("localhost", simulator.getPort()));
                     JRCPoverTCPChannelClient jrcPoverTCPChannelClient = new JRCPoverTCPChannelClient(socket, eventResponseMessage -> {
                         logger.info("STATUS: " + eventResponseMessage.getStatus().getData());
                         logger.info("DATA: " + HexUtil.byteArrayToHexString(eventResponseMessage.getEventData()));
